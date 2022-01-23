@@ -19,3 +19,17 @@ btnTwo.onclick = function () {
 	btnTwo.classList.add("activ");
 	btnOne.classList.remove("activ");
 };
+
+let btnUp = document.getElementById("btn-up");
+
+window.onscroll = function (e) {
+	if (window.scrollY >= 1000) {
+		btnUp.style.display = "block";
+	} else {
+		btnUp.style.display = "none";
+	}
+};
+
+btnUp.onclick = function () {
+	window.scrollTo(0, 0);
+};
